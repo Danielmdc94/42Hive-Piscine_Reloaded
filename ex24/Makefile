@@ -6,7 +6,7 @@
 #    By: dpalacio <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 12:54:26 by dpalacio          #+#    #+#              #
-#    Updated: 2021/11/04 11:10:19 by dpalacio         ###   ########.fr        #
+#    Updated: 2021/11/04 12:36:51 by dpalacio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ $(NAME): c_to_o
 	ar rc $(NAME) *.o
 
 c_to_o:
-	gcc -Wall -Wextra -Werror -I./$(INCLUDE) $(SRC)
+	gcc -c -Wall -Wextra -Werror -I$(INCLUDE) $(SRC)
 
 clean:
 	rm -f *.o
